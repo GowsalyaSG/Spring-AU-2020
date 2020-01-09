@@ -1,0 +1,276 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+body {margin:0;}
+html{
+  scroll-behavior: smooth;
+}
+* {box-sizing: border-box}
+
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.html {width: 90%; background-color: #4CAF50;}
+.css {width: 80%; background-color: #2196F3;}
+.js {width: 65%; background-color: #f44336;}
+.php {width: 60%; background-color: #808080;}
+.split {
+    height: 100%;
+    position: absolute;
+}
+
+
+.right {
+  right: 0;
+  width: 80%;
+  background-color: rgb(224,213,149);
+opacity: 0.8;
+padding-left: 40px;
+}
+.centered {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  text-align: center;
+}
+.rightcentered {
+
+text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top:0;
+  width: 100%;
+ 
+  height: 50px;
+  
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+</style>
+</head>
+<body>
+<div style="position: fixed;z-index:1">
+<ul>
+  <li style="float:left;font-size: larger;background-color:Gray;"><a href="#">Resume</a></li>
+  <li><a href="#contact">Contact</a></li>
+
+  <li><a href="#project">Project</a></li>
+  <li><a href="#technicalskills">Technical Skills</a></li>
+  <li><a class="active" href="#">About Me</a></li>
+  
+</ul>
+</div style="position: fixed;">
+<div id="About" style="background-color:skyblue;position:relative;top:50px;height: 700px;">
+<div class="split left" style="background-color:black;color:white;padding:45px">
+   
+      <img   src="C:\Users\Mantha\Downloads\g.jpg" width=200px;height=200px;align=left; alt="mypic">
+      
+       <pre style="font-size:larger;color:RED;" >    GOWSALYA S G</pre>
+    
+  </div>
+<div class="split right">
+    <div class="rightcentered">
+      
+        <h2>About Me</h2>
+            <p>My name is Gowsalya S G. I was born in Ramanathapuram.
+            My career objective is to contribute more to an organization through 
+            constant learning and contemporary working.
+            my personality traits are "I am a Perfectionist,Sociable,Spontaneous 
+            person". I always have the curiosity to learn many things and can easily grasp 
+             the things which i have experienced in my education journey.
+            I like Travelling,listening to music.</p>
+      
+           </div>
+<div>
+<h3 align=center>EDUCATION</h3>
+<h4 style="color:blue">Government college of Technology-coimbatore</h4>
+<p>B.Tech Information Technology with 8.76 CGPA upto sixth semester</p>
+<h4 style="color:blue">JKKN Matric Higher Secondary School</h4>
+<p>HSC with 96.58%</p>
+<h4 style="color:blue">Sourashtra Higher Secondary School</h4>
+<p>SSLC with 97.20%</p>
+</div>
+<div>
+<h2 align=center>Activities</h2>
+  <p>Team Advisor in Rotaract Club</p>
+  <p>Head of the Hospitality Committee </p>
+  <p>Member of Green Club GCT</p>
+</div>
+</div>
+
+</div>
+
+<div id="technicalskills" style="height:700px;position: relative;margin-top: 50px;background-color: rgb(238,165,214); padding-top:50px;">
+  <h1>My Skills</h1>
+
+<p>HTML</p>
+<div class="container">
+  <div class="skills html">85%</div>
+</div>
+
+<p>CSS</p>
+<div class="container">
+  <div class="skills css">80%</div>
+</div>
+
+<p>JavaScript</p>
+<div class="container">
+  <div class="skills js">70%</div>
+</div>
+
+<p>PHP</p>
+<div class="container">
+  <div class="skills php">60%</div>
+</div>
+</div>
+
+<div id="project" style="height:700px; position: relative;background-image: url('images.jpg');  background-size: cover;background-repeat: no-repeat">
+  <div id="project1">
+<br>
+<br>
+<br><h3 >Project 1:</h3>
+  <h3>An IoT Based Automatic Vehicle Accident Detection:</h3>
+  <p>
+
+This system finds the accident spot at any place through GPS and GSM module and implement services for hospital , family members , police- station 
+to receive notification about the accident occurrence and its location.
+Hardware Requirements are Arduino Micro-controller,Adlx335 MEMS Sensor,GPS, GSM Module 
+Software Requirement is Arduino IDE</p>
+
+
+</div>
+  <div id="project2">
+<h3>project 2:</h3>
+    <h3> Machine based application to detect DDos attack in sdn.</h3>
+    <p>Our project is to detect and mitigate various traffic attacks in network with high detection rate and maintain the satisfactory false alarm rate</p>
+</div>
+</div>
+<div id="contact" style="height:700px;position: relative;">
+  <h3 style="text-align: center;">Contact Form</h3>
+
+<div class="container">
+  <form>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="india">India</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write down something.." style="height:100px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<div align=center>
+    <a href="#" class="fa fa-facebook"></a><span>gowsalya</span>
+    <a href="#" class="fa fa-linkedin"></a><span>gowsalya</span>
+    <a href="#" class="fa fa-skype"></a><span>gowsalya</span>
+    <a href="#" class="fa fa-instagram"></a><span>gowsalya</span>
+    <a href="#" class="fa fa-twitter"></a><span>gowsalya</span>
+
+</div>
+</div>
+</body>
+</html>
