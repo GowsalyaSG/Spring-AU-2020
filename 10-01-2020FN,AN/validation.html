@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>Validation</title>
+   <script type="text/javascript"> 
+            function checkpassword() { 
+                u=f.userid.value;
+                if (u==""){
+                    alert (" user name should not empty");return false;
+                     }
+                p1 = f.pwd1.value; 
+                p2 = f.pwd2.value;  
+                if (p1.length==8 && /[a-z]/.test(p1) && /[A-Z]/.test(p1) && /abc/.test(p1) && /[@~$]/.test(p1) && p1!="")
+                  {}
+               else{ 
+                    alert ("Password is not empty,should contain atleast one upper and one lower and one special char with length =8, Please enter again") 
+                    return false; 
+                } 
+                 if (p2.length==8 && /[a-z]/.test(p2) && /[A-Z]/.test(p2) && /abc/.test(p2) && /[@~$]/.test(p2) && p2!="")
+                 {}
+                 else{ 
+                    alert ("confirm Password is not empty,should contain atleast one upper and one lower and one special char with length =8, Please enter again") 
+                    return false; 
+                } 
+               if (p1 != p2) { 
+                    alert ("Password did not match, Please enter again") 
+                    return false; 
+                }  
+                else{ 
+                    alert("Password Matched") 
+                    return true; 
+                } 
+            } 
+        </script> 
+ </head>  
+ <body>
+ <h2 color="pink">Password Validation in javascript</h2>
+ 
+ <form name="f" >
+    User name :          <input type="text" name="userid" ><br><br>
+    User password  :<input type="password" name="pwd1"><br><br>
+    Confirm password:<input type="password" name="pwd2"><br>
+    <input type="submit" onclick="return checkpassword();" value="submit" />
+    
+</form>
+</body>
+</html>

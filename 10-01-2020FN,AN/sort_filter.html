@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sort and Filter</title>
+<style>
+table {
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+</style>
+</head>
+<body>
+<form name="f">
+  Name:<br>
+  <input type="text" name="name" ><br>
+  
+  country:<br>
+ <select name="country">
+    <option value="india">india</option>
+    <option value="us">us</option>
+    <option value="germany">germany</option>
+    <option value="china">china</option>
+  </select><br>
+ <h2>username</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names" title="Type in a name">
+</form>
+
+<p>Click the button to sort the table by name in ascending order:</p>
+<p><button onclick="sortTable()">Sort</button></p>
+
+<table id="myTable" style="width:200px;height:10px;">
+  <tr>
+    <th>Name</th>
+    <th>Country</th>
+  </tr>
+    <td>Koniglich Essen</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Italy</td>
+  </tr>
+  <tr>
+    <td>Paris specialites</td>
+    <td>France</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Canada</td>
+  </tr>
+<tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Berglunds snabbkop</td>
+    <td>Sweden</td>
+  </tr>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+function sortTable() {
+  var table, rows, s, i, x, y, shouldSwitch;
+  table = document.getElementById("myTable");
+  s = true;
+  while (s) {
+    
+    s = false;
+    rows = table.rows;
+   
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+     
+      x = rows[i].getElementsByTagName("td")[0];
+      y = rows[i + 1].getElementsByTagName("td")[0];
+      
+      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+        
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      s = true;
+    }
+  }
+}
+</script>
+
+</body>
+</html>
