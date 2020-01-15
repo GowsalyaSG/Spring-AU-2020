@@ -1,0 +1,15 @@
+
+<table *ngIf="user && user.length>0">
+ <tr >
+  <th>Id</th>
+  <th>firstname</th>
+  <th>lastname</th>
+  <th>contact</th>
+ </tr>
+ <tr *ngFor="let u of user">
+    <td>{{u.id}}</td>
+    <td>{{u.firstname}}</td>
+    <td>{{u.lastname}}</td>
+    <td>{{u.contact}}</td>
+ </tr>
+</table>

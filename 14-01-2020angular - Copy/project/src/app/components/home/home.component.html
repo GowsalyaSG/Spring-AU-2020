@@ -1,0 +1,19 @@
+
+
+<form name="form" [formGroup]="myForm" (change)="check()">
+
+    <label>FirstName</label><br>
+    <input id="first" type="text" formControlName="firstname">{{errname}}<br>
+     
+   <label>LastName</label><br>
+    <input id="last" type="text" formControlName="lastname">{{errlast}}<br>
+    <label>Id</label><br>
+    <input id="id" type="number" formControlName="id">{{errid}}<br>
+    <label>Contact</label><br>
+    <input id="contact" type="number" formControlName="contact">{{errcon}}<br><br>
+    <button *ngIf="formValid" (click)="submit()" [disabled]="(!myForm.valid)">Submit</button>
+    </form>
+
+
+
+
