@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/context/spring-context.xsd
+       ">
+           
+<bean id="Company" class="com.spring.models.Company">
+<property name="name" value="ACCOLITE"></property>
+<property name="employees">
+	<map>
+			<entry key="1" value-ref="Employee1"></entry>
+			<entry key="2" value-ref="Employee2"></entry>
+			<entry key="3" value-ref="Employee3"></entry>
+			<entry key="4" value-ref="Employee4"></entry>
+	</map>
+</property>
+</bean>
+
+<bean class="com.spring.models.Employee" id="Employee1">
+			<property name="name" value="Gowsalya"></property>
+			<property name="dept" value="IT"></property>
+			<property name="empid" value="33"></property>
+			<property name="age" value="21"></property>
+			
+			
+</bean>
+
+<bean class="com.spring.models.Employee" id="Employee2">
+			<property name="name" value="sivan"></property>
+			<property name="dept" value="IT"></property>
+			<property name="empid" value="34"></property>
+			<property name="age" value="20"></property>
+</bean>
+
+<bean class="com.spring.models.Employee" id="Employee3">
+			<property name="name" value="Sathish"></property>
+			<property name="dept" value="CS"></property>
+			<property name="empid" value="36"></property>
+			<property name="age" value="24"></property>
+</bean>
+<bean class="com.spring.models.Employee" id="Employee4">
+			<property name="name" value="Hari"></property>
+			<property name="dept" value="IT"></property>
+			<property name="empid" value="37"></property>
+			<property name="age" value="20"></property>
+</bean>
+
+</beans>
